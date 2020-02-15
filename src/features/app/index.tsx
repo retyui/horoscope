@@ -1,40 +1,31 @@
-import { compose } from 'ramda';
-import React, { ComponentType } from 'react';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import React from 'react';
 import { ThemeProvider } from 'react-native-stylex';
-import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
-import { withNavigationExtractor } from '@/features/navigation/withNavigationExtractor';
+import { setNavigator } from '@/features/navigation/instance';
+import Splash from '@/features/splashScreen/Splash';
 import useCurrentTheme from '@/features/styles/hooks/useCurrentTheme';
+import withSafeAreaProvider from '@/features/styles/withSafeAreaProvider';
 import createStore from '@/redux/createStore';
 import { withReduxProvider } from '@/redux/withRedux';
-
-import routes, { initialRouteName } from './routes';
+import Welcome from '@/features/auth/WelcomeScreen';
 
 const store = createStore();
-
-const RootNavigator = createSwitchNavigator(routes, { initialRouteName });
-
-const Navigator = compose(
-  withNavigationExtractor,
-  // @ts-ignore
-  createAppContainer,
-)(RootNavigator);
-
-const App = (props: {}) => {
+const Stack = createStackNavigator();
+const App = () => {
   const currentTheme = useCurrentTheme();
 
   return (
     <ThemeProvider value={currentTheme}>
-      <Navigator {...props} />
+      <NavigationContainer ref={setNavigator}>
+        <Stack.Navigator initialRouteName="Welcome" headerMode="none">
+          <Stack.Screen name="Splash" component={Splash} />
+          <Stack.Screen name="Welcome" component={Welcome} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </ThemeProvider>
   );
 };
-
-const withSafeAreaProvider = (Component: ComponentType<any>) => (props: {}) => (
-  <SafeAreaProvider>
-    <Component {...props} />
-  </SafeAreaProvider>
-);
 
 export default withSafeAreaProvider(withReduxProvider(store)(App));

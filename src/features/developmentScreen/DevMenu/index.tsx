@@ -1,6 +1,6 @@
 import crashlytics from '@react-native-firebase/crashlytics';
 import React from 'react';
-import { Button, View, Text } from 'react-native';
+import { Button, Text, View } from 'react-native';
 
 import SafeAreaView from '@/components/SafeAreaView';
 import TopBar from '@/components/TopBar';

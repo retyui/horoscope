@@ -1,15 +1,14 @@
-import {
-  NavigationActions,
-  NavigationBackActionPayload,
-  NavigationDispatch,
-  NavigationNavigateActionPayload,
-  NavigationPushAction,
-  NavigationPushActionPayload,
-  NavigationSetParamsActionPayload,
-  StackActions,
-} from 'react-navigation';
+import { StackActions } from '@react-navigation/native';
+import { CommonActions } from '@react-navigation/routers';
 
 import { getNavigatorInstance } from './instance';
+
+type NavigationBackActionPayload = any;
+type NavigationDispatch = any;
+type NavigationNavigateActionPayload = any;
+type NavigationPushAction = any;
+type NavigationPushActionPayload = any;
+type NavigationSetParamsActionPayload = any;
 
 export const getDispatch = (): NavigationDispatch => {
   const navigator = getNavigatorInstance();
@@ -40,21 +39,21 @@ export const navigateTo = (
   options?: Omit<NavigationNavigateActionPayload, 'routeName'>,
 ) => {
   const dispatch = getDispatch();
-  const action = NavigationActions.navigate({ ...options, routeName });
+  const action = CommonActions.navigate({ ...options, routeName });
 
   dispatch(action);
 };
 
-export const goBack = (options?: NavigationBackActionPayload) => {
+export const goBack = () => {
   const dispatch = getDispatch();
-  const action = NavigationActions.back(options);
+  const action = CommonActions.goBack();
 
   dispatch(action);
 };
 
 export const setParams = (options: NavigationSetParamsActionPayload) => {
   const dispatch = getDispatch();
-  const action = NavigationActions.setParams(options);
+  const action = CommonActions.setParams(options);
 
   dispatch(action);
 };

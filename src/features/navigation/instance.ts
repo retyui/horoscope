@@ -1,10 +1,10 @@
-import { NavigationContainer } from 'react-navigation';
+import { NavigationContainer } from '@react-navigation/native';
 
 const config: {
-  navigator: NavigationContainer | null;
+  navigator: typeof NavigationContainer | null;
 } = { navigator: null };
 
-export function setNavigator(nav: NavigationContainer) {
+export function setNavigator(nav: typeof NavigationContainer) {
   config.navigator = nav;
 }
 

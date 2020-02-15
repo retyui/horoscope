@@ -1,5 +1,5 @@
 import { renderHook } from '@/testing/hooks';
-import { createMockReduxStore, createMockProvider } from '@/testing/redux';
+import { createMockProvider, createMockReduxStore } from '@/testing/redux';
 
 import { useSelector } from './index';
 

@@ -6,10 +6,6 @@ import { NativeModules } from 'react-native';
 configure({ adapter: new Adapter() });
 
 NativeModules.RNCAsyncStorage = {};
-NativeModules.RollbarReactNative = {
-  init: () => {},
-  deviceAttributes: () => '{}',
-};
 
 jest.mock('@react-native-firebase/app', () => ({}));
 jest.mock('@react-native-firebase/crashlytics', () => {

@@ -20,20 +20,16 @@ export const restoreStoredEnvs = async (): Promise<void> => {
   try {
     const result = await AsyncStorage.getItem(ASYNC_STORAGE_KEY);
     // @ts-ignore
-    const { applicationName, platformApiUrl } = JSON.parse(result);
+    const { platformApiUrl } = JSON.parse(result);
 
-    setMemoryEnvs({ applicationName, platformApiUrl });
+    setMemoryEnvs({ platformApiUrl });
   } catch {}
 };
 
-export const updateEnvs = async ({
-  applicationName,
-  platformApiUrl,
-}: DynamicEnvs) => {
+export const updateEnvs = async ({ platformApiUrl }: DynamicEnvs) => {
   await AsyncStorage.setItem(
     ASYNC_STORAGE_KEY,
     JSON.stringify({
-      applicationName,
       platformApiUrl,
     }),
   );

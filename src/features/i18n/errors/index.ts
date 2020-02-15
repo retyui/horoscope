@@ -15,7 +15,7 @@ export const getErrorMessage = (error: Error | AxiosError): string => {
   }
 
   return fbt(
-    'Your request cannot be processed at this time. Try again and if you continue to have these issues, contact support@glossgenius.com.',
+    'Your request cannot be processed at this time. Try again and if you continue to have these issues, contact support@test.com.',
     'unknown error message',
   );
 };

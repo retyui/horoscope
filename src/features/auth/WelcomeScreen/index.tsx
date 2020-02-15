@@ -5,8 +5,9 @@ import { useDispatch } from '@/redux/hooks';
 
 import useStyles from './styles';
 import EllipseIcon from '@/components/EllipseIcon';
+import Text from "@/components/Text";
 
-const Splash = () => {
+const Welcome = () => {
   const styles = useStyles();
   const dispatch = useDispatch();
 
@@ -17,8 +18,12 @@ const Splash = () => {
   return (
     <SafeAreaView style={styles.root}>
       <EllipseIcon />
+
+      <Text style={styles.welcomeMsg}>
+        <fbt desc='Welcome msg'>{'Welcome To \nHoroscope Premium'}</fbt>
+      </Text>
     </SafeAreaView>
   );
 };
 
-export default Splash;
+export default Welcome;

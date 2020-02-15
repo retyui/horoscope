@@ -3,7 +3,7 @@ import { FormikProps } from 'formik';
 import React from 'react';
 import { View } from 'react-native';
 
-import AsyncActionButton from '@/components/AsyncActionButton';
+import AsyncActionButton from 'Button';
 import FormikFieldErrorText from '@/components/FormikFieldErrorText';
 import FormikTextField from '@/components/FormikTextField';
 import useKeyboardDismiss from '@/hooks/useKeyboardDismiss';

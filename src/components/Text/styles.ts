@@ -2,12 +2,8 @@ import { makeUseStyles } from '@/features/styles';
 
 export default makeUseStyles(({ fonts, palette }) => ({
   root: {
-    fontFamily: fonts.AvenirNext.regular,
+    fontFamily: fonts.Muli.regular,
     color: palette.text.primary,
-  },
-  caption: {
-    fontSize: 12,
-    lineHeight: 18,
   },
   left: { textAlign: 'left' },
   right: { textAlign: 'right' },

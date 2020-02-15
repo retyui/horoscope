@@ -1,10 +1,9 @@
 import './bootstrap';
-import './features/errorTracking/rollbar/init';
+import './features/errorTracking/init';
 import './features/environment/initDynmicEnv';
 import './api/init';
 import './features/cache/init';
 import './features/i18n/init';
-import './features/countriesPhoneCodes/consts/device.ts';
 
 import { AppRegistry } from 'react-native';
 

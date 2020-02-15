@@ -4,6 +4,7 @@ import responseToResourcesIndex from '../responseToResourcesIndex';
 
 const BLOCK_TYPE = 'block';
 const PAGE_TYPE = 'page';
+
 export const createPageItem = (id: ItemId, attributes = {}, other?: {}) => ({
   ...other,
   id,

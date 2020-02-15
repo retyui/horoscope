@@ -1,18 +1,10 @@
 import { createStackNavigator } from 'react-navigation-stack';
 
-import { createDynamicScreen } from '@/features/navigation/utils';
-
-import {
-  AUTH_ROOT_SCREEN_NAME,
-  ORGANIZATION_PASSWORD_ROOT_SCREEN_NAME,
-  SIGN_IN_SCREEN_NAME,
-} from './consts/screens';
-import recoveryPasswordRoutes from './RecoveryPasswordScreen/routes';
+import { AUTH_ROOT_SCREEN_NAME, SIGN_IN_SCREEN_NAME } from './consts/screens';
 import signInRoutes from './SignInScreen/routes';
 import signUpRoutes from './SignUpScreen/routes';
 
 let routes = {
-  ...recoveryPasswordRoutes,
   ...signInRoutes,
   ...signUpRoutes,
 };
@@ -38,12 +30,6 @@ const AuthNavigator = createStackNavigator(routes, {
 
 const authRoutes = {
   [AUTH_ROOT_SCREEN_NAME]: AuthNavigator,
-  [ORGANIZATION_PASSWORD_ROOT_SCREEN_NAME]: {
-    screen: createDynamicScreen(() => require('./OrganizationPasswordScreen')),
-    navigationOptions: {
-      headerShown: false,
-    },
-  },
 };
 
 export default authRoutes;

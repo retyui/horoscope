@@ -2,7 +2,6 @@
 import { spawn } from 'redux-saga/effects';
 
 import * as Crashlytics from './crashlytics';
-import * as Rollbar from './rollbar';
 
 const joinFn = <Args extends Array<any>, Return>(
   functions: Array<(...a: Args) => Return>,
@@ -10,12 +9,9 @@ const joinFn = <Args extends Array<any>, Return>(
   return (...args: Args) => functions.forEach((fn) => fn(...args));
 };
 
-export const setPerson = joinFn([Rollbar.setPerson, Crashlytics.setPerson]);
+export const setPerson = joinFn([Crashlytics.setPerson]);
 
-export const clearPerson = joinFn([
-  Rollbar.clearPerson,
-  Crashlytics.clearPerson,
-]);
+export const clearPerson = joinFn([Crashlytics.clearPerson]);
 
 export const trackException = (error: Error) => {
   /* istanbul ignore next */
@@ -23,7 +19,6 @@ export const trackException = (error: Error) => {
     return console.warn(`Unexpected error ${error}`);
   }
 
-  Rollbar.trackException(error);
   Crashlytics.trackException(error);
 };
 
