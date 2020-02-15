@@ -10,10 +10,11 @@ type Props = {
   onPress?: () => void;
   children?: any;
   disabled?: boolean;
+  variant: 'outlined' | 'contained';
   style?: StyleProp<ViewStyle>;
 };
 
-const BaseButton = ({ onPress, children, disabled, style }: Props) => {
+const BaseButton = ({ variant, onPress, children, disabled, style }: Props) => {
   const styles = useStyles();
 
   return (
@@ -21,6 +22,7 @@ const BaseButton = ({ onPress, children, disabled, style }: Props) => {
       onPress={disabled ? undefined : onPress}
       style={concatStyles<ViewStyle>(
         styles.root,
+        variant && styles[variant],
         disabled && styles.disabled,
         style,
       )}

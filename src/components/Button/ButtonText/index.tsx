@@ -7,13 +7,18 @@ import useStyles from './styles';
 
 type Props = {
   children: any;
+  variant: 'outlined' | 'contained';
   style?: StyleProp<TextStyle>;
 };
 
-const ButtonText = ({ children, style }: Props) => {
+const ButtonText = ({ variant, children, style }: Props) => {
   const styles = useStyles();
 
-  return <Text style={[styles.text, style]}>{children}</Text>;
+  return (
+    <Text weight="700" style={[styles.text, styles[variant], style]}>
+      {children}
+    </Text>
+  );
 };
 
 export default ButtonText;

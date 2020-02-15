@@ -4,14 +4,21 @@ export default makeUseStyles(({ palette }) => ({
   root: {
     alignItems: 'center',
     alignSelf: 'center',
-    backgroundColor: palette.accent.primary,
-    borderRadius: 50,
+    borderRadius: 6,
     justifyContent: 'center',
-    minHeight: 50,
-    minWidth: 240,
+    minHeight: 44,
     overflow: 'hidden',
+    width: '100%',
   },
   disabled: {
     opacity: 0.3,
+  },
+  outlined: {
+    backgroundColor: 'transparent',
+    borderWidth: 1.5,
+    borderColor: palette.accent.primary,
+  },
+  contained: {
+    backgroundColor: palette.accent.primary,
   },
 }));

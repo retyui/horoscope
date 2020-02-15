@@ -1,13 +1,10 @@
 import { makeUseStyles } from '@/features/styles';
-import { calcHeight } from '@/utils/responsive';
 
 export default makeUseStyles(({ palette }) => ({
   root: {
-    width: '50%',
-    height: calcHeight({
-      scaleWidth: 1,
-      scaleHeight: 0.5,
-    }),
+    width: 205,
+    height: 205,
+    alignSelf: 'center',
   },
   innerRoot: {
     position: 'absolute',

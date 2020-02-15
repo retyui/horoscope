@@ -6,7 +6,6 @@ import BaseButton from '@/components/BaseButton';
 import ButtonContent from './ButtonContent';
 
 type Props = {
-  variant?: 'outlined' | 'contained';
   ButtonComponent?: ComponentType<any>;
   ButtonContent?: ComponentType<any>;
 } & Omit<

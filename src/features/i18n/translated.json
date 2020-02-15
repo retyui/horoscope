@@ -1,1 +1,24 @@
-{}
+{
+  "en_US": {
+    "3mL3OH": "Error",
+    "24HT9k": "Try again",
+    "1f1tw7": "Email",
+    "4aORx": "Password",
+    "ojBaX": "Sign in",
+    "2p96Ct": "We couldn't find your account. Sign up!",
+    "3kqpOD": "Incorrect email or password. Please try again.",
+    "3jRnoU": "Password is a required field",
+    "Eosnw": "Confirmations",
+    "4DnlHl": "Are you sure you want to Logout?",
+    "9xSsY": "Cancel",
+    "2lbchI": "Yes",
+    "3XZUaE": "Welcome To Horoscope Premium",
+    "4sho2r": "Not Found",
+    "3S6g5N": "An unknown network error has occurred.",
+    "PMagC": "You don't have access",
+    "4x6cG2": "Need authorization",
+    "3oCeVV": "Your request cannot be processed at this time. Try again and if you continue to have these issues, contact support@test.com.",
+    "4Ake1o": "Please enter a valid email address",
+    "3yZAhV": "Email is a required field"
+  }
+}

@@ -15,6 +15,7 @@ export type DefaultProps = {
 export type Props = DefaultProps & {
   ButtonComponent: ComponentType<any>;
   ButtonContent: ComponentType<any>;
+  variant: 'contained' | 'outlined';
   error: Error | null;
   isRunning: boolean;
   children: any;

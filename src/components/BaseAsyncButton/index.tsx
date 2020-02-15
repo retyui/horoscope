@@ -14,6 +14,7 @@ const BaseAsyncButton = ({
   error,
   isRunning,
   returnDelay = 2000,
+  variant,
   ...rest
 }: Props) => {
   const [stage, setStage] = useState<ButtonStage>(DEFAULT_STAGE);
@@ -35,8 +36,14 @@ const BaseAsyncButton = ({
   useEffect(() => stop, [stop]);
 
   return (
-    <ButtonComponent {...rest} disabled={disabled || isInLoadingStage(stage)}>
-      <ButtonContent stage={stage}>{children}</ButtonContent>
+    <ButtonComponent
+      {...rest}
+      variant={variant}
+      disabled={disabled || isInLoadingStage(stage)}
+    >
+      <ButtonContent variant={variant} stage={stage}>
+        {children}
+      </ButtonContent>
     </ButtonComponent>
   );
 };
