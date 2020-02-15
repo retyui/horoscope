@@ -78,6 +78,7 @@ import com.android.build.OutputFile
 
 project.ext.react = [
         entryFile   : "index.js",
+        bundleInDebug: false,
         enableHermes: false, // clean and rebuild if changing
 ]
 
@@ -130,11 +131,13 @@ android {
             keyPassword 'android'
         }
         release {
-            storeFile file('debug.keystore')
-            storePassword 'android'
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
+            storeFile file('release.keystore')
+            storePassword 'asdsad67G7h&Ihj'
+            keyAlias 'relase-horoscope-alias'
+            keyPassword 'asdsad67G7h&Ihj'
         }
+// keytool -exportcert -alias relase-horoscope-alias -keystore release.keystore | openssl sha1 -binary | openssl base64
+// keytool -exportcert -alias androiddebugkey -keystore debug.keystore | openssl sha1 -binary | openssl base64
     }
     compileSdkVersion rootProject.ext.compileSdkVersion
 

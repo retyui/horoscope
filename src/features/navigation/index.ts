@@ -21,15 +21,9 @@ export const getDispatch = (): NavigationDispatch => {
   throw new Error("Couldn't extract navigator instance");
 };
 
-export const push = (
-  routeName: string,
-  options?: Omit<NavigationPushActionPayload, 'routeName'>,
-) => {
+export const push = (routeName: string, params?: object) => {
   const dispatch = getDispatch();
-  const action: NavigationPushAction = StackActions.push({
-    routeName,
-    ...options,
-  });
+  const action: NavigationPushAction = StackActions.push(routeName, params);
 
   dispatch(action);
 };

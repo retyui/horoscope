@@ -19,7 +19,6 @@ export default makeUseStyles(() => ({
   name: {
     fontSize: 18,
     lineHeight: 23,
-    tintColor: palette.text.primary,
     marginBottom: 8,
     textAlign: 'center',
   },

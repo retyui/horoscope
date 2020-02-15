@@ -1,4 +1,4 @@
-import authRoutes from '@/features/auth/routes';
+import authRoutes from '@/features/auth/navigator';
 import { SPLASH_SCREEN_NAME } from '@/features/splashScreen/consts';
 import splashRoutes from '@/features/splashScreen/routes';
 
