@@ -10,6 +10,7 @@ import withSafeAreaProvider from '@/features/styles/withSafeAreaProvider';
 import createStore from '@/redux/createStore';
 import { withReduxProvider } from '@/redux/withRedux';
 import Welcome from '@/features/auth/WelcomeScreen';
+import SelectHoroscope from '@/features/auth/SelectHoroscopeScreen';
 
 const store = createStore();
 const Stack = createStackNavigator();
@@ -19,9 +20,10 @@ const App = () => {
   return (
     <ThemeProvider value={currentTheme}>
       <NavigationContainer ref={setNavigator}>
-        <Stack.Navigator initialRouteName="Welcome" headerMode="none">
+        <Stack.Navigator initialRouteName="SelectHoroscope" headerMode="none">
           <Stack.Screen name="Splash" component={Splash} />
           <Stack.Screen name="Welcome" component={Welcome} />
+          <Stack.Screen name="SelectHoroscope" component={SelectHoroscope} />
         </Stack.Navigator>
       </NavigationContainer>
     </ThemeProvider>

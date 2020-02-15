@@ -1,21 +1,16 @@
-import React, { useEffect } from 'react';
 import { fbt } from 'fbt';
+import React from 'react';
+import { View } from 'react-native';
+
+import Button from '@/components/Button';
+import EllipseIcon from '@/components/EllipseIcon';
 import SafeAreaView from '@/components/SafeAreaView';
-import { useDispatch } from '@/redux/hooks';
+import Text from '@/components/Text';
 
 import useStyles from './styles';
-import EllipseIcon from '@/components/EllipseIcon';
-import Text from '@/components/Text';
-import Button from '@/components/Button';
-import {View} from "react-native";
 
 const Welcome = () => {
   const styles = useStyles();
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    // dispatch(appLaunched());
-  }, [dispatch]);
 
   return (
     <SafeAreaView style={styles.root}>
