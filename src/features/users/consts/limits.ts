@@ -1,0 +1,2 @@
+export const MINIMAL_PASSWORD_LENGTH = 8;
+export const MINIMAL_PHONE_NUMBER_LENGTH = 7;

@@ -1,0 +1,8 @@
+export const NETWORK_ERROR_STATUS_CODE = 0;
+export const BAD_REQUEST_STATUS_CODE = 400;
+export const UNAUTHORIZED_STATUS_CODE = 401;
+export const FORBIDDEN_STATUS_CODE = 403;
+export const NOT_FOUND_CODE = 404;
+export const UNPROCESSABLE_ENTITY_CODE = 422;
+export const SERVER_ERRORS_CODE = 500;
+export const GATEWAY_TIMEOUT_CODE = 504;

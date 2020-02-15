@@ -1,0 +1,1 @@
+export const UPDATE_CURRENT_USER_ID = 'currentUser/UPDATE_CURRENT_USER_ID';

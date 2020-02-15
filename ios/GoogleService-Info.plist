@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>165352876108-hrvjo9gomv6au5l2172pk8nd4d1r6v3v.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.165352876108-hrvjo9gomv6au5l2172pk8nd4d1r6v3v</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBj3BVFBbo698qhrT-AOQvT737W7S4qi4s</string>
+	<key>GCM_SENDER_ID</key>
+	<string>165352876108</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.davidn.horoscope</string>
+	<key>PROJECT_ID</key>
+	<string>horoscope-active</string>
+	<key>STORAGE_BUCKET</key>
+	<string>horoscope-active.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:165352876108:ios:ec9152edfd333a96d2ace9</string>
+	<key>DATABASE_URL</key>
+	<string>https://horoscope-active.firebaseio.com</string>
+</dict>
+</plist>

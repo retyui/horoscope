@@ -1,0 +1,1 @@
+export const INDEX_RESOURCES = 'dao/INDEX_RESOURCES';
