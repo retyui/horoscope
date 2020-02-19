@@ -3,7 +3,7 @@ import { makeUseStyles } from '@/features/styles';
 export default makeUseStyles({
   root: {
     flex: 1,
-    paddingHorizontal: 20,
+    paddingHorizontal: 16,
     paddingBottom: 32,
   },
   innerRoot: {
