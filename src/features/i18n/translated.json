@@ -14,8 +14,7 @@
     "1H7AKx": "Capricorn",
     "42diHL": "Aquarius",
     "3M2lVQ": "Pisces",
-    "1if1KD": "Select Your Horoscope",
-    "4o7thR": "Sign",
+    "9aZ8W": "Select Your Horoscope Sign",
     "2E7s6f": "Done",
     "1f1tw7": "Email",
     "4aORx": "Password",
@@ -27,8 +26,7 @@
     "4DnlHl": "Are you sure you want to Logout?",
     "9xSsY": "Cancel",
     "2lbchI": "Yes",
-    "1ZcJGR": "Welcome To",
-    "wi3CH": "Horoscope Premium",
+    "3XZUaE": "Welcome To Horoscope Premium",
     "3c2qMP": "Sign up with Facebook",
     "1cle9t": "Select your Zodiac Manually",
     "4sho2r": "Not Found",
@@ -36,6 +34,16 @@
     "PMagC": "You don't have access",
     "4x6cG2": "Need authorization",
     "3oCeVV": "Your request cannot be processed at this time. Try again and if you continue to have these issues, contact support@test.com.",
+    "YyIVN": {
+      "*": {
+        "*": "You have {number of likes} likes on your photos.",
+        "_1": "You have {number of likes} likes on your photo."
+      },
+      "_1": {
+        "*": "You have a like on your photos.",
+        "_1": "You have a like on your photo."
+      }
+    },
     "4Ake1o": "Please enter a valid email address",
     "3yZAhV": "Email is a required field"
   }

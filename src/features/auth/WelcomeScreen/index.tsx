@@ -19,9 +19,7 @@ const Welcome = () => {
       <View style={styles.innerRoot}>
         <EllipseIcon />
         <Text weight="800" style={styles.welcomeMsg}>
-          <fbt desc="Welcome msg">Welcome To </fbt>
-          {'\n'}
-          <fbt desc="Welcome msg">Horoscope Premium</fbt>
+          <fbt desc="Welcome msg">{`Welcome To \n Horoscope Premium`}</fbt>
         </Text>
       </View>
       <Button
